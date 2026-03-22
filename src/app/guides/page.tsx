@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description:
       "Бесплатные видеогайды для вебкам-моделей — от настройки оборудования до продвижения и безопасности.",
   },
+  alternates: { canonical: "/guides" },
 };
 
 export default function GuidesPage() {

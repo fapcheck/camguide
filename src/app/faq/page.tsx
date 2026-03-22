@@ -12,6 +12,7 @@ export const metadata: Metadata = {
     description:
       "Ответы на популярные вопросы о самостоятельной работе вебкам-моделью.",
   },
+  alternates: { canonical: "/faq" },
 };
 
 export default function FaqPage() {
@@ -47,6 +48,23 @@ export default function FaqPage() {
 
       <AnimateIn delay={100}>
         <Accordion items={faqItems} />
+      </AnimateIn>
+
+      <AnimateIn delay={200}>
+        <div className="mt-16 rounded-xl border border-border bg-surface p-8 text-center">
+          <h2 className="mb-3 text-xl font-semibold">Не нашли ответ?</h2>
+          <p className="mb-6 text-sm text-muted">
+            Напишите нам в Telegram — мы ответим в течение 24 часов.
+          </p>
+          <a
+            href="https://t.me/camguide_support"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="inline-block rounded-full bg-accent px-6 py-2.5 text-sm font-semibold text-white transition-colors hover:bg-accent-hover"
+          >
+            Написать в Telegram
+          </a>
+        </div>
       </AnimateIn>
     </div>
   );

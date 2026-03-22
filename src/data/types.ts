@@ -12,4 +12,5 @@ export type Guide = {
   youtubeId: string;
   recommended: boolean;
   relatedSlugs: string[];
+  publishedAt: string;
 };

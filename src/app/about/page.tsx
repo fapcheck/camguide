@@ -11,6 +11,7 @@ export const metadata: Metadata = {
     description:
       "CamGuide — бесплатный образовательный проект для вебкам-моделей, которые хотят работать самостоятельно.",
   },
+  alternates: { canonical: "/about" },
 };
 
 const iconMap: Record<string, React.ReactNode> = {

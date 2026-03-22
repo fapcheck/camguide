@@ -23,6 +23,7 @@ export const guides: Guide[] = [
     youtubeId: "aB3cD4eFgHI",
     recommended: true,
     relatedSlugs: ["vybor-platformy-dlya-raboty", "sozdanie-privlekatelnogo-profilya", "vybor-veb-kamery"],
+    publishedAt: "2025-11-10",
   },
   {
     slug: "vybor-platformy-dlya-raboty",
@@ -35,6 +36,7 @@ export const guides: Guide[] = [
     youtubeId: "xK9mN2pQrSt",
     recommended: false,
     relatedSlugs: ["kak-nachat-rabotat-samostoyatelno", "sozdanie-privlekatelnogo-profilya"],
+    publishedAt: "2025-11-15",
   },
   {
     slug: "sozdanie-privlekatelnogo-profilya",
@@ -47,6 +49,7 @@ export const guides: Guide[] = [
     youtubeId: "fG7hJ8kLmNo",
     recommended: false,
     relatedSlugs: ["kak-nachat-rabotat-samostoyatelno", "lichnyy-brend"],
+    publishedAt: "2025-11-20",
   },
 
   // Оборудование и настройка
@@ -61,6 +64,7 @@ export const guides: Guide[] = [
     youtubeId: "pQ1rS2tUvWx",
     recommended: true,
     relatedSlugs: ["nastroyka-osvescheniya", "oborudovanie-rabochego-mesta", "nastroyka-zvuka"],
+    publishedAt: "2025-12-01",
   },
   {
     slug: "nastroyka-osvescheniya",
@@ -73,6 +77,7 @@ export const guides: Guide[] = [
     youtubeId: "yZ0aB1cDeF2",
     recommended: false,
     relatedSlugs: ["vybor-veb-kamery", "oborudovanie-rabochego-mesta", "uluchshenie-kachestva-strima"],
+    publishedAt: "2025-12-05",
   },
   {
     slug: "oborudovanie-rabochego-mesta",
@@ -85,6 +90,7 @@ export const guides: Guide[] = [
     youtubeId: "gH3iJ4kLmN5",
     recommended: false,
     relatedSlugs: ["nastroyka-osvescheniya", "nastroyka-zvuka"],
+    publishedAt: "2025-12-10",
   },
   {
     slug: "nastroyka-zvuka",
@@ -97,6 +103,7 @@ export const guides: Guide[] = [
     youtubeId: "oP6qR7sT8uV",
     recommended: false,
     relatedSlugs: ["vybor-veb-kamery", "nastroyka-obs-s-nulya"],
+    publishedAt: "2025-12-15",
   },
 
   // OBS и стриминг
@@ -111,6 +118,7 @@ export const guides: Guide[] = [
     youtubeId: "wX9yZ0aB1cD",
     recommended: true,
     relatedSlugs: ["sceny-i-istochniki-v-obs", "uluchshenie-kachestva-strima", "nastroyka-zvuka"],
+    publishedAt: "2026-01-05",
   },
   {
     slug: "sceny-i-istochniki-v-obs",
@@ -123,6 +131,7 @@ export const guides: Guide[] = [
     youtubeId: "eF2gH3iJ4kL",
     recommended: false,
     relatedSlugs: ["nastroyka-obs-s-nulya", "uluchshenie-kachestva-strima"],
+    publishedAt: "2026-01-10",
   },
   {
     slug: "uluchshenie-kachestva-strima",
@@ -135,6 +144,7 @@ export const guides: Guide[] = [
     youtubeId: "mN5oP6qR7sT",
     recommended: false,
     relatedSlugs: ["nastroyka-obs-s-nulya", "nastroyka-osvescheniya"],
+    publishedAt: "2026-01-15",
   },
 
   // Продвижение
@@ -149,6 +159,7 @@ export const guides: Guide[] = [
     youtubeId: "uV8wX9yZ0aB",
     recommended: true,
     relatedSlugs: ["rabota-s-auditoriey", "lichnyy-brend", "sozdanie-privlekatelnogo-profilya"],
+    publishedAt: "2026-01-20",
   },
   {
     slug: "rabota-s-auditoriey",
@@ -161,6 +172,7 @@ export const guides: Guide[] = [
     youtubeId: "cD1eF2gH3iJ",
     recommended: false,
     relatedSlugs: ["prodvizhenie-v-sotssetyakh", "lichnyy-brend"],
+    publishedAt: "2026-01-25",
   },
   {
     slug: "lichnyy-brend",
@@ -173,6 +185,7 @@ export const guides: Guide[] = [
     youtubeId: "kL4mN5oP6qR",
     recommended: false,
     relatedSlugs: ["prodvizhenie-v-sotssetyakh", "sozdanie-privlekatelnogo-profilya"],
+    publishedAt: "2026-02-01",
   },
 
   // Безопасность и приватность
@@ -187,6 +200,7 @@ export const guides: Guide[] = [
     youtubeId: "sT7uV8wX9yZ",
     recommended: true,
     relatedSlugs: ["tsifrovaya-gigiena", "rabota-s-negativom"],
+    publishedAt: "2026-02-10",
   },
   {
     slug: "tsifrovaya-gigiena",
@@ -199,6 +213,7 @@ export const guides: Guide[] = [
     youtubeId: "aB0cD1eF2gH",
     recommended: false,
     relatedSlugs: ["zashchita-lichnykh-dannykh", "rabota-s-negativom"],
+    publishedAt: "2026-02-15",
   },
   {
     slug: "rabota-s-negativom",
@@ -211,6 +226,7 @@ export const guides: Guide[] = [
     youtubeId: "iJ3kL4mN5oP",
     recommended: false,
     relatedSlugs: ["zashchita-lichnykh-dannykh", "tsifrovaya-gigiena"],
+    publishedAt: "2026-02-20",
   },
 ];
 

@@ -1,5 +1,18 @@
+import type { Metadata } from "next";
 import Link from "next/link";
 import AnimateIn from "@/components/AnimateIn";
+
+export const metadata: Metadata = {
+  title: "CamGuide — Гайды для независимых моделей",
+  description:
+    "Бесплатная библиотека видеогайдов для вебкам-моделей: настройка оборудования, OBS, продвижение и безопасность. Работайте на себя без студий.",
+  openGraph: {
+    title: "CamGuide — Гайды для независимых моделей",
+    description:
+      "Бесплатная библиотека видеогайдов для вебкам-моделей. Работайте на себя без студий и посредников.",
+  },
+  alternates: { canonical: "/" },
+};
 
 const benefits = [
   {
@@ -34,9 +47,34 @@ const benefits = [
   },
 ];
 
+const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    name: "CamGuide",
+    url: "https://camguide.vercel.app",
+    description:
+      "Бесплатная библиотека видеогайдов для вебкам-моделей, которые хотят работать самостоятельно.",
+    inLanguage: "ru",
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "CamGuide",
+    url: "https://camguide.vercel.app",
+    description:
+      "Бесплатный образовательный проект для вебкам-моделей, которые хотят работать самостоятельно без студий.",
+  },
+];
+
 export default function Home() {
   return (
     <div>
+      <script
+        type="application/ld+json"
+        dangerouslySetInnerHTML={{ __html: JSON.stringify(jsonLd) }}
+      />
+
       {/* Hero */}
       <section className="relative overflow-hidden">
         <div className="absolute inset-0 bg-[radial-gradient(ellipse_at_center,_rgba(236,72,153,0.08)_0%,_transparent_70%)]" />
