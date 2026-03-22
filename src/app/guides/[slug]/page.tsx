@@ -9,6 +9,7 @@ import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
 import GuideCard from "@/components/GuideCard";
 import YouTubeEmbed from "@/components/YouTubeEmbed";
+import ShareButtons from "@/components/ShareButtons";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -122,12 +123,16 @@ export default async function GuidePage({ params }: Props) {
         <YouTubeEmbed youtubeId={guide.youtubeId} title={guide.title} />
       </div>
 
-      <div className="mb-16 max-w-none space-y-4">
+      <div className="mb-8 max-w-none space-y-4">
         {guide.content.split("\n\n").map((paragraph, i) => (
           <p key={i} className="text-muted leading-relaxed">
             {paragraph}
           </p>
         ))}
+      </div>
+
+      <div className="mb-16 border-t border-border pt-6">
+        <ShareButtons url={`/guides/${guide.slug}`} title={guide.title} />
       </div>
 
       {related.length > 0 && (
