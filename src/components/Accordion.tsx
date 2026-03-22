@@ -9,8 +9,8 @@ type Props = {
 export default function Accordion({ items }: Props) {
   return (
     <div className="divide-y divide-border">
-      {items.map((item, i) => (
-        <details key={i} className="group">
+      {items.map((item) => (
+        <details key={item.question} className="group">
           <summary className="flex cursor-pointer items-center justify-between py-5 text-left font-medium transition-colors hover:text-accent">
             {item.question}
             <svg

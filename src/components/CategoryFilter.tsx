@@ -1,6 +1,6 @@
 "use client";
 
-import type { Category } from "@/data/guides";
+import type { Category } from "@/data/types";
 
 type Props = {
   categories: Category[];

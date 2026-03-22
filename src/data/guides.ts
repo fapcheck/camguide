@@ -1,18 +1,6 @@
-export type Category = {
-  id: string;
-  title: string;
-};
+import type { Category, Guide } from "./types";
 
-export type Guide = {
-  slug: string;
-  title: string;
-  description: string;
-  content: string;
-  categoryId: string;
-  youtubeId: string;
-  recommended: boolean;
-  relatedSlugs: string[];
-};
+export type { Category, Guide };
 
 export const categories: Category[] = [
   { id: "getting-started", title: "Начало работы" },

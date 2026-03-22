@@ -1,18 +1,10 @@
 "use client";
 
 import { useState } from "react";
-import Link from "next/link";
-import type { Category, Guide } from "@/data/guides";
+import type { Category, Guide } from "@/data/types";
 import SearchBar from "./SearchBar";
 import CategoryFilter from "./CategoryFilter";
-
-const categoryGradients: Record<string, string> = {
-  "getting-started": "from-pink-500 to-rose-600",
-  equipment: "from-violet-500 to-purple-600",
-  "obs-streaming": "from-blue-500 to-cyan-600",
-  promotion: "from-amber-500 to-orange-600",
-  safety: "from-emerald-500 to-teal-600",
-};
+import GuideCard from "./GuideCard";
 
 type Props = {
   categories: Category[];
@@ -35,7 +27,6 @@ export default function GuidesClient({ categories, guides }: Props) {
 
   const isFiltered = !!query || !!activeCategory;
 
-  // Group by category when not filtered
   const groupedByCategory = isFiltered
     ? null
     : categories
@@ -87,38 +78,5 @@ export default function GuidesClient({ categories, guides }: Props) {
         ))
       )}
     </>
-  );
-}
-
-function GuideCard({ guide }: { guide: Guide }) {
-  const gradient =
-    categoryGradients[guide.categoryId] || "from-pink-500 to-rose-600";
-
-  return (
-    <Link
-      href={`/guides/${guide.slug}`}
-      className="group card-hover-glow rounded-xl border border-border bg-surface overflow-hidden"
-    >
-      <div
-        className={`relative h-40 bg-gradient-to-br ${gradient} flex items-center justify-center`}
-      >
-        <svg
-          className="h-12 w-12 text-white/60 transition-transform group-hover:scale-110"
-          fill="currentColor"
-          viewBox="0 0 24 24"
-        >
-          <path d="M8 5v14l11-7z" />
-        </svg>
-        {guide.recommended && (
-          <span className="absolute top-3 right-3 rounded-full bg-white/20 px-2.5 py-0.5 text-xs font-medium text-white backdrop-blur-sm">
-            Рекомендуем
-          </span>
-        )}
-      </div>
-      <div className="p-5">
-        <h3 className="mb-2 font-semibold leading-snug">{guide.title}</h3>
-        <p className="text-sm text-muted line-clamp-2">{guide.description}</p>
-      </div>
-    </Link>
   );
 }

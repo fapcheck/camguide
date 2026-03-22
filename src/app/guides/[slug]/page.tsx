@@ -1,5 +1,4 @@
 import type { Metadata } from "next";
-import Link from "next/link";
 import {
   guides,
   getGuideBySlug,
@@ -8,6 +7,7 @@ import {
 } from "@/data/guides";
 import { notFound } from "next/navigation";
 import Breadcrumbs from "@/components/Breadcrumbs";
+import GuideCard from "@/components/GuideCard";
 
 type Props = { params: Promise<{ slug: string }> };
 
@@ -29,14 +29,6 @@ export async function generateMetadata({ params }: Props): Promise<Metadata> {
     },
   };
 }
-
-const categoryGradients: Record<string, string> = {
-  "getting-started": "from-pink-500 to-rose-600",
-  equipment: "from-violet-500 to-purple-600",
-  "obs-streaming": "from-blue-500 to-cyan-600",
-  promotion: "from-amber-500 to-orange-600",
-  safety: "from-emerald-500 to-teal-600",
-};
 
 export default async function GuidePage({ params }: Props) {
   const { slug } = await params;
@@ -106,35 +98,9 @@ export default async function GuidePage({ params }: Props) {
         <section>
           <h2 className="mb-6 text-xl font-semibold">Связанные гайды</h2>
           <div className="grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-            {related.map((rel) => {
-              const gradient =
-                categoryGradients[rel.categoryId] ||
-                "from-pink-500 to-rose-600";
-              return (
-                <Link
-                  key={rel.slug}
-                  href={`/guides/${rel.slug}`}
-                  className="group card-hover-glow rounded-xl border border-border bg-surface overflow-hidden"
-                >
-                  <div
-                    className={`h-32 bg-gradient-to-br ${gradient} flex items-center justify-center`}
-                  >
-                    <svg
-                      className="h-10 w-10 text-white/60 transition-transform group-hover:scale-110"
-                      fill="currentColor"
-                      viewBox="0 0 24 24"
-                    >
-                      <path d="M8 5v14l11-7z" />
-                    </svg>
-                  </div>
-                  <div className="p-4">
-                    <h3 className="text-sm font-semibold leading-snug">
-                      {rel.title}
-                    </h3>
-                  </div>
-                </Link>
-              );
-            })}
+            {related.map((rel) => (
+              <GuideCard key={rel.slug} guide={rel} variant="compact" />
+            ))}
           </div>
         </section>
       )}
